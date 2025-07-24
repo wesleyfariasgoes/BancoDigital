@@ -36,7 +36,6 @@ class LoginFragment : Fragment() {
         if (email.isNotEmpty()) {
             if (password.isNotEmpty()) {
                 Toast.makeText(requireContext(), "Login efetuado...", Toast.LENGTH_SHORT).show()
-
             } else {
                 Toast.makeText(requireContext(), "Digite sua senha", Toast.LENGTH_SHORT).show()
             }
