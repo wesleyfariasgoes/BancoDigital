@@ -1,7 +1,9 @@
-package com.wfghc.bancodigital.repository.auth
+package com.wfghc.bancodigital.data.repository.auth
+
+import com.google.firebase.database.FirebaseDatabase
 
 class AuthFirebaseDataSourceImpl(
-
+    private val firebaseDatabase: FirebaseDatabase
 ): AuthFirebaseDataSource {
     override suspend fun login(email: String, password: String) {
         TODO("Not yet implemented")

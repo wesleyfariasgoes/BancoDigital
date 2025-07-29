@@ -1,4 +1,4 @@
-package com.wfghc.bancodigital.repository.auth
+package com.wfghc.bancodigital.data.repository.auth
 
 interface AuthFirebaseDataSource {
     suspend fun login(email: String, password: String)
