@@ -1,11 +1,13 @@
 package com.wfghc.bancodigital.domain.auth
 
+import com.wfghc.bancodigital.data.model.User
 import com.wfghc.bancodigital.data.repository.auth.AuthFirebaseDataSourceImpl
+import javax.inject.Inject
 
-class RegisterUseCase(
+class RegisterUseCase @Inject constructor(
     private val authFirebaseDataSourceImpl: AuthFirebaseDataSourceImpl
 ) {
-    suspend operator fun invoke(name: String, email: String, phone: String, password: String) {
-        return authFirebaseDataSourceImpl.register(name,email, phone, password)
+    suspend operator fun invoke(user: User): User {
+        return authFirebaseDataSourceImpl.register(user)
     }
 }

@@ -1,6 +1,8 @@
 [versions]
+hiltAndroid = "2.56.2"
+kotlin = "2.0.21"
 agp = "8.11.1"
-kotlin = "2.2.0"
+ksp = "2.0.21-1.0.27"
 daggerHilt = "2.56.2"
 firebaseBom = "34.0.0"
 services = "4.4.3"
@@ -10,10 +12,13 @@ material = "1.11.0"
 junit = "4.13.2"
 junitExt = "1.1.5"
 espressoCore = "3.5.1"
+navigationFragmentKtx = "2.9.3"
+navigationUiKtx = "2.9.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
@@ -21,12 +26,12 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-database = { module = "com.google.firebase:firebase-database" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerHilt" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" } # Este está correto.
 google-services = { id = "com.google.gms.google-services", version.ref = "services" }

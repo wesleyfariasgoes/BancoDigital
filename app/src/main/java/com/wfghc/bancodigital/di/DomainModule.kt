@@ -3,12 +3,15 @@ package com.wfghc.bancodigital.di
 import com.wfghc.bancodigital.data.repository.auth.AuthFirebaseDataSource
 import com.wfghc.bancodigital.data.repository.auth.AuthFirebaseDataSourceImpl
 import dagger.Binds
-//import dagger.Module
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 
-//@Module
+@Module
+@InstallIn(ViewModelComponent::class)
 abstract class DomainModule {
 
-//    @Binds
+    @Binds
     abstract fun bindsAuthRepository(
         authFirebaseDataSourceImpl: AuthFirebaseDataSourceImpl
     ): AuthFirebaseDataSource

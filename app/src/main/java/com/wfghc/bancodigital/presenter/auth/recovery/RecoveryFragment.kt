@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.wfghc.bancodigital.databinding.FragmentRecoveryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RecoveryFragment : Fragment() {
 
     private var _binding: FragmentRecoveryBinding? = null

@@ -1,19 +1,50 @@
 package com.wfghc.bancodigital.data.repository.auth
 
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.wfghc.bancodigital.data.model.User
+import javax.inject.Inject
+import kotlin.coroutines.suspendCoroutine
 
-class AuthFirebaseDataSourceImpl(
-    private val firebaseDatabase: FirebaseDatabase
-): AuthFirebaseDataSource {
+class AuthFirebaseDataSourceImpl @Inject constructor(
+    private val firebaseAuth: FirebaseAuth
+) : AuthFirebaseDataSource {
+
     override suspend fun login(email: String, password: String) {
-        TODO("Not yet implemented")
+        return suspendCoroutine { continuation ->
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        continuation.resumeWith(Result.success(Unit))
+                    } else {
+                        task.exception?.let { continuation.resumeWith(Result.failure(it)) }
+                    }
+                }
+        }
     }
 
-    override suspend fun register(nome: String, email: String, phone: String, password: String) {
-        TODO("Not yet implemented")
+    override suspend fun register(user: User): User {
+        return suspendCoroutine { continuation ->
+            firebaseAuth.createUserWithEmailAndPassword(user.email, user.password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        continuation.resumeWith(Result.success(user))
+                    } else {
+                        task.exception?.let { continuation.resumeWith(Result.failure(it)) }
+                    }
+                }
+        }
     }
 
     override suspend fun recover(email: String) {
-        TODO("Not yet implemented")
+        return suspendCoroutine { continuation ->
+            firebaseAuth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        continuation.resumeWith(Result.success(Unit))
+                    } else {
+                        task.exception?.let { continuation.resumeWith(Result.failure(it)) }
+                    }
+                }
+        }
     }
 }
