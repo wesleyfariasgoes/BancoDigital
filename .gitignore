@@ -1,15 +1,61 @@
+# ============================
+# Android Studio / IntelliJ
+# ============================
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+*.ipr
+*.iws
+
+# ============================
+# Build
+# ============================
 /build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+/app/build
+/.gradle
+/local.properties
+
+# ============================
+# Log & Errors
+# ============================
+*.log
+.kotlinc/
+.kotlin/
+.kotin/errors/
+
+# ============================
+# Firebase
+# ============================
+google-services.json
+
+# ============================
+# MacOS
+# ============================
+.DS_Store
+
+# ============================
+# Gradle
+# ============================
+.gradle/
+gradle-app.setting
+gradlew
+gradlew.bat
+
+# ============================
+# JetBrains Cache
+# ============================
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/navEditor.xml
+.idea/inspectionProfiles
+
+# ============================
+# Misc
+# ============================
+captures/
+outputs/
+navigation.json
