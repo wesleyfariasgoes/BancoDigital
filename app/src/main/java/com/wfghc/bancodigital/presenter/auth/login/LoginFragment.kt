@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.wfghc.bancodigital.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.text.isNotEmpty
+import kotlin.text.trim
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {

@@ -1,23 +1,20 @@
-package com.wfghc.bancodigital.presenter.splash
+package com.wfghc.bancodigital.presenter
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.wfghc.bancodigital.R
+import androidx.fragment.app.Fragment
 import com.wfghc.bancodigital.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SplashFragment : Fragment() {
-
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
@@ -28,5 +25,4 @@ class SplashFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -5,24 +5,22 @@ import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class FireBaseModule {
+object FireBaseModule {
 
     @Singleton
     @Provides
-    fun providesFireBaseDataBase(): FirebaseDatabase {
+    fun provideFirebaseDataBase(): FirebaseDatabase {
         return FirebaseDatabase.getInstance()
     }
 
     @Singleton
     @Provides
-    fun providesFireBaseAuth(): FirebaseAuth {
+    fun provideFirebaseAuth(): FirebaseAuth {
         return FirebaseAuth.getInstance()
     }
-
 }

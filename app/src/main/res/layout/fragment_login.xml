@@ -39,7 +39,7 @@
             android:drawablePadding="8dp"
             android:layout_margin="24dp"
             android:drawableTint="@color/color_default"
-            android:hint="Põe o E-mail aqui"
+            android:hint="E-mail"
             android:padding="14dp"
             android:textColorHint="@color/color_text_hint"
             app:layout_constraintBottom_toTopOf="@+id/edit_password"
