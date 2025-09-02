@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "573204446939",
+    "project_id": "bancodigital-3ad9a",
+    "storage_bucket": "bancodigital-3ad9a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573204446939:android:c645f2d818d12465d356fe",
+        "android_client_info": {
+          "package_name": "com.wfghc.bancodigital"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKO-T3R2x_qsVwH6tJA3AACWiJT4t6BDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
