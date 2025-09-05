@@ -36,7 +36,7 @@ class RecoverFragment : Fragment() {
 
     private fun validateData() {
         val email = binding.editEmail.text.toString().trim()
-        
+
         if (email.isNotEmpty()) {
             Toast.makeText(requireContext(), "Enviando e-mail...", Toast.LENGTH_SHORT)
 
