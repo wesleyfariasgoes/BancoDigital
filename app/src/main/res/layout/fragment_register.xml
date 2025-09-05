@@ -10,16 +10,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/appBarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent">
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-                <Toolbar
+                <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -28,8 +31,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Registrar" />
-                </Toolbar>
+                        android:text="@string/create_account"
+                        android:textColor="@color/color_default"/>
+                </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
 
             <LinearLayout
@@ -43,7 +47,7 @@
                     android:id="@+id/textInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome"
+                    android:text="@string/name"
                     android:textColor="@color/color_default" />
 
                 <EditText
@@ -51,19 +55,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/bg_edit_around"
+                    style="@style/Theme.EditText"
                     android:drawableStart="@drawable/ic_user"
                     android:drawablePadding="8dp"
-                    android:drawableTint="@color/color_default"
-                    android:hint="Digite seu nome"
-                    android:padding="14dp"
-                    android:textColorHint="@color/color_text_hint" />
+                    android:hint="@string/enter_your_name"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="E-mail"
+                    android:text="@string/e_mail"
                     android:textColor="@color/color_default" />
 
                 <EditText
@@ -71,19 +72,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/bg_edit_around"
+                    style="@style/Theme.EditText"
                     android:drawableStart="@drawable/ic_email"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/color_default"
-                    android:hint="Digite seu email"
-                    android:padding="14dp"
-                    android:textColorHint="@color/color_text_hint" />
+                    android:hint="@string/enter_your_email"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Telefone"
+                    android:text="@string/phone"
                     android:textColor="@color/color_default" />
 
                 <EditText
@@ -91,19 +88,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/bg_edit_around"
+                    style="@style/Theme.EditText"
                     android:drawableStart="@drawable/ic_phone"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/color_default"
-                    android:hint="Digite seu telefone"
-                    android:padding="14dp"
-                    android:textColorHint="@color/color_text_hint" />
+                    android:hint="@string/enter_your_phone" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Senha"
+                    android:text="@string/password"
                     android:textColor="@color/color_default" />
 
                 <EditText
@@ -111,21 +104,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/bg_edit_around"
+                    style="@style/Theme.EditText"
                     android:drawableStart="@drawable/ic_lock"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/color_default"
-                    android:hint="Digite uma senha"
-                    android:padding="14dp"
-                    android:textColorHint="@color/color_text_hint" />
+                    android:hint="Digite uma senha" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_enter"
+                    android:id="@+id/btn_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_btn"
-                    android:text="Cadastrar"
+                    android:text="@string/register"
                     android:textColor="@color/white"
                     app:backgroundTint="@null"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -135,9 +124,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:visibility="invisible"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="24dp"
-                    android:indeterminateTint="@color/color_default" />
+                    android:indeterminateTint="@color/color_default"
+                    tools:visibility="visible"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.wfghc.bancodigital.R
 import com.wfghc.bancodigital.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.text.isNotEmpty
@@ -30,7 +32,13 @@ class LoginFragment : Fragment() {
     }
 
     private fun initListners() {
-        binding.btnEnter.setOnClickListener { validateData() }
+        binding.textRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+        binding.textRecover.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_recoveryFragment)
+        }
+        binding.btnLogin.setOnClickListener { validateData() }
     }
 
     private fun validateData() {

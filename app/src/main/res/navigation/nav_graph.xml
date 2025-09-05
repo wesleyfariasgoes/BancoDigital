@@ -19,9 +19,9 @@
     </fragment>
     <fragment
         android:id="@+id/recoveryFragment"
-        android:name="com.wfghc.bancodigital.presenter.auth.recovery.RecoveryFragment"
+        android:name="com.wfghc.bancodigital.presenter.auth.recover.RecoverFragment"
         android:label="fragment_recovery"
-        tools:layout="@layout/fragment_recovery" />
+        tools:layout="@layout/fragment_recover" />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.wfghc.bancodigital.presenter.auth.register.RegisterFragment"

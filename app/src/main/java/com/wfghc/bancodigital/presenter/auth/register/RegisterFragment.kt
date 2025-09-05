@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.wfghc.bancodigital.databinding.FragmentRegisterBinding
+import com.wfghc.bancodigital.util.initToolbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.text.isNotEmpty
 import kotlin.text.trim
@@ -27,11 +28,12 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
         initListners()
     }
 
     private fun initListners() {
-        binding.btnEnter.setOnClickListener { validateData() }
+        binding.btnRegister.setOnClickListener { validateData() }
     }
 
     private fun validateData() {
